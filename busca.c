@@ -2,6 +2,7 @@
 
 #define SIZE 10
 
+/*Busca Sequencial*/
 int buscaSeq(int*v, int e, int size){
   int i;
   for(i = 0; i < size; i++)
@@ -9,6 +10,7 @@ int buscaSeq(int*v, int e, int size){
     return i;
 }
 
+/*Busca Binária iterativa*/
 int buscaBinaria(int* v, int e, int size){
  int inicio = 0, fim = SIZE-1;
  int meio;
@@ -25,6 +27,7 @@ int buscaBinaria(int* v, int e, int size){
  return -1;
 }
 
+/*Busca binária recursiva*/
 int buscaBinariaRecursiva(int* v, int e, int inicio, int fim){
   if(inicio > fim)
    return -1;
@@ -42,6 +45,7 @@ int buscaBinariaRecursiva(int* v, int e, int inicio, int fim){
 int main(){
  int v[SIZE] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}; 
 
+ /*chamada das funções*/
  printf("Sequencial\n");
  printf("Posicao: %d ", buscaSeq(v, 5, SIZE));
  printf("\n");
